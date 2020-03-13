@@ -14,15 +14,15 @@ public class JsonParse {
 
     public JsonParse() {
     }
-    
-    JSONObject parseJson(JSONObject obj)throws Exception{
+    //
+    String parseJson(JSONObject obj)throws Exception{
         int key;
         
-        String cipherAlphabet = cipher(13);
+        String cipherAlphabet = cipher(13,"abcdefghi");
         
-        return 1;
+        return cipherAlphabet;
     } 
-    String cipher(int key){
+    String cipher(int key,String chipherPhrase){
         String resp = "";
         int indexx=0;
         int realIndex;
@@ -31,8 +31,15 @@ public class JsonParse {
         }else{
             indexx=key-1;
         }
-        
         String normalAlphabet = "abcdefghijklmnopqrstuvwxyz";
+        char[] tempvar = chipherPhrase.toCharArray();
+        for(int i = 0;i<chipherPhrase.length();i++){
+            tempvar[i]=chipherPhrase.charAt(indexx);
+            indexx++;
+            resp=tempvar.toString();
+        }
+        
+        
         //O INDEXX NADA MAIS E Q O LOCAL POR ONDE ELE DEVE COMEÇAR BASEADO NA CHAVE
         /*
         for(int i = 0;i<26;i++){

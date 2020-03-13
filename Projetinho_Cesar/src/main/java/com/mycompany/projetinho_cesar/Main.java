@@ -14,8 +14,8 @@ public class Main {
         ApiGet apiget = new ApiGet();
         
         JsonParse jparse= new JsonParse();
-        jparse.parseJson(apiget.apiGetResp());
-        
+        //jparse.parseJson(apiget.apiGetResp());
+        System.out.println(jparse.parseJson(apiget.apiGetResp()));
     }
     
 }
