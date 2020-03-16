@@ -12,10 +12,14 @@ package com.mycompany.projetinho_cesar;
 public class Main {
     public static void main(String[] args)throws Exception {
         ApiGet apiget = new ApiGet();
-        
+        ApiPost apipost = new ApiPost();
         JsonParse jparse= new JsonParse();
+        
+        //jparse.parseJson(apiget.apiGetResp());
         //jparse.parseJson(apiget.apiGetResp());
         System.out.println(jparse.parseJson(apiget.apiGetResp()));
+        
+        //System.out.println(jparse.parseJson());
     }
     
 }
