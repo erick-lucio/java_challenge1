@@ -24,7 +24,7 @@ public class ApiPost {
       URL url = new URL (url_key);
       HttpURLConnection con = (HttpURLConnection)url.openConnection();
       con.setRequestMethod("POST");
-      con.setRequestProperty("Content-Type", "application/json; utf-8");//mudar o tipo
+      con.setRequestProperty("Content-Type", "multipart/form-data:; utf-8");//mudar o tipo
       con.setRequestProperty("Accept", "application/json");
       con.setDoOutput(true);
       
